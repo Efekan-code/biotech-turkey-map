@@ -1,0 +1,71 @@
+alan,tanim,yil,arge_gdp_pct
+FORD1,Dogal Bilimler (Biyoloji dahil),2005,0.05
+FORD1,Dogal Bilimler (Biyoloji dahil),2006,0.05
+FORD1,Dogal Bilimler (Biyoloji dahil),2007,0.07
+FORD1,Dogal Bilimler (Biyoloji dahil),2008,0.07
+FORD1,Dogal Bilimler (Biyoloji dahil),2009,0.08
+FORD1,Dogal Bilimler (Biyoloji dahil),2010,0.09
+FORD1,Dogal Bilimler (Biyoloji dahil),2011,0.09
+FORD1,Dogal Bilimler (Biyoloji dahil),2012,0.09
+FORD1,Dogal Bilimler (Biyoloji dahil),2013,0.09
+FORD1,Dogal Bilimler (Biyoloji dahil),2014,0.09
+FORD1,Dogal Bilimler (Biyoloji dahil),2015,0.1
+FORD1,Dogal Bilimler (Biyoloji dahil),2016,0.07
+FORD1,Dogal Bilimler (Biyoloji dahil),2017,0.1
+FORD1,Dogal Bilimler (Biyoloji dahil),2018,0.08
+FORD1,Dogal Bilimler (Biyoloji dahil),2019,0.06
+FORD1,Dogal Bilimler (Biyoloji dahil),2020,0.06
+FORD1,Dogal Bilimler (Biyoloji dahil),2021,0.07
+FORD1,Dogal Bilimler (Biyoloji dahil),2022,0.06
+FORD1,Dogal Bilimler (Biyoloji dahil),2023,0.05
+FORD1,Dogal Bilimler (Biyoloji dahil),2024,0.05
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2005,0.14
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2006,0.13
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2007,0.15
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2008,0.14
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2009,0.17
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2010,0.14
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2011,0.14
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2012,0.13
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2013,0.13
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2014,0.13
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2015,0.12
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2016,0.15
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2017,0.15
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2018,0.16
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2019,0.16
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2020,0.17
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2021,0.16
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2022,0.18
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2023,0.18
+FORD3,Tip ve Saglik Bilimleri (Tibbi Biyotek dahil),2024,0.19
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2005,0.03
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2006,0.03
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2007,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2008,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2009,0.05
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2010,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2011,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2012,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2013,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2014,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2015,0.07
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2016,0.07
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2017,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2018,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2019,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2020,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2021,0.04
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2022,0.03
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2023,0.03
+FORD4,Tarim Bilimleri (Tarimsal Biyotek dahil),2024,0.03
+FORD1-4,Dogal+Muhendislik+Tip+Tarim (Toplam),2005,0.47
+FORD1-4,Dogal+Muhendislik+Tip+Tarim (Toplam),2006,0.47
+FORD1-4,Dogal+Muhendislik+Tip+Tarim (Toplam),2007,0.57
+FORD1-4,Dogal+Muhendislik+Tip+Tarim (Toplam),2008,0.58
+FORD1-4,Dogal+Muhendislik+Tip+Tarim (Toplam),2009,0.66
+FORD1-4,Dogal+Muhendislik+Tip+Tarim (Toplam),2010,0.66
+FORD1-4,Dogal+Muhendislik+Tip+Tarim (Toplam),2011,0.66
+FORD1-4,Dogal+Muhendislik+Tip+Tarim (Toplam),2012,0.69
+FORD1-4,Dogal+Muhendislik+Tip+Tarim (Toplam),2013,0.68
+FORD1-4,Dogal+Muhendislik+Tip+Tarim (Toplam),2014,0.72
