@@ -87,6 +87,90 @@ descs = {
     '81': "Düzce, fındığı ve yaylalarıyla Batı Karadeniz'in yeşil şehridir."
 }
 
+agri = {
+    '01': [('🌿','Pamuk'), ('🌾','Buğday'), ('🍋','Narenciye'), ('🌽','Mısır'), ('🥜','Yer Fıstığı'), ('🫙','Susam')],
+    '02': [('🫘','Antep Fıstığı'), ('🍇','Üzüm'), ('🌿','Tütün'), ('🌾','Pamuk'), ('🌹','Zeytin')],
+    '03': [('🌸','Haşhaş'), ('🍬','Şeker Pancarı'), ('🍅','Domates'), ('🐑','Koyun'), ('🧈','Kaymak')],
+    '04': [('🌾','Buğday'), ('🌾','Arpa'), ('🍬','Şeker Pancarı'), ('🥔','Patates'), ('🐄','Büyükbaş')],
+    '05': [('🍎','Elma'), ('🌾','Buğday'), ('🍬','Şeker Pancarı'), ('🍑','Kayısı'), ('🐄','Büyükbaş')],
+    '06': [('🌾','Arpa'), ('🌾','Buğday'), ('🍬','Şeker Pancarı'), ('🥕','Havuç'), ('🐐','Ankara Keçisi')],
+    '07': [('🍊','Narenciye'), ('🍌','Muz'), ('🍅','Domates'), ('🍓','Çilek'), ('🥒','Salatalık')],
+    '08': [('🍵','Çay'), ('🌰','Fındık'), ('🍯','Bal'), ('🐟','Alabalık'), ('🌽','Mısır')],
+    '09': [('🫒','Zeytin'), ('🍒','İncir'), ('🌿','Pamuk'), ('🍇','Üzüm'), ('🍊','Narenciye')],
+    '10': [('🫒','Zeytin'), ('🍅','Domates'), ('🌾','Buğday'), ('🌽','Mısır'), ('🌻','Ayçiçeği')],
+    '11': [('🍑','Şeftali'), ('🍅','Domates'), ('🌾','Buğday'), ('🐄','Büyükbaş'), ('🌰','Fındık')],
+    '12': [('🍯','Bal'), ('🌾','Arpa'), ('🌾','Buğday'), ('🐑','Koyun'), ('🌿','Tıbbi Bitkiler')],
+    '13': [('🍬','Şeker Pancarı'), ('🍎','Elma'), ('🌾','Buğday'), ('🐑','Koyun'), ('🌰','Ceviz')],
+    '14': [('🍄','Mantar'), ('🐟','Alabalık'), ('🍅','Domates'), ('🌰','Fındık'), ('🌿','Tıbbi Bitkiler')],
+    '15': [('🌹','Gül'), ('🍎','Elma'), ('🍬','Şeker Pancarı'), ('🐄','Büyükbaş'), ('🌿','Lavanta')],
+    '16': [('🍑','Şeftali'), ('🍒','Kiraz'), ('🫒','Zeytin'), ('🍅','Domates'), ('🐛','İpek Böceği')],
+    '17': [('🫒','Zeytin'), ('🍅','Domates'), ('🌾','Buğday'), ('🍇','Üzüm'), ('🐑','Koyun')],
+    '18': [('🍬','Şeker Pancarı'), ('🌾','Buğday'), ('🧅','Soğan'), ('🐑','Koyun'), ('🌿','Tıbbi Bitkiler')],
+    '19': [('🫘','Nohut'), ('🍬','Şeker Pancarı'), ('🌾','Buğday'), ('🌸','Haşhaş'), ('🐑','Koyun')],
+    '20': [('🫒','Zeytin'), ('🍇','Üzüm'), ('🍒','İncir'), ('🍅','Domates'), ('🌹','Gül')],
+    '21': [('🍉','Karpuz'), ('🌾','Buğday'), ('🌿','Pamuk'), ('🍇','Üzüm'), ('🌾','Mercimek')],
+    '22': [('🌾','Buğday'), ('🌻','Ayçiçeği'), ('🌾','Pirinç'), ('🍬','Şeker Pancarı'), ('🍇','Üzüm')],
+    '23': [('🍑','Kayısı'), ('🍇','Üzüm'), ('🌾','Buğday'), ('🐟','Alabalık'), ('🐄','Büyükbaş')],
+    '24': [('🍒','Kiraz'), ('🍎','Elma'), ('🌾','Buğday'), ('🧀','Tulum Peyniri'), ('🍯','Bal')],
+    '25': [('🌾','Arpa'), ('🌾','Buğday'), ('🍬','Şeker Pancarı'), ('🍯','Bal'), ('🐑','Koyun')],
+    '26': [('🌾','Buğday'), ('🌾','Arpa'), ('🍬','Şeker Pancarı'), ('🍅','Domates'), ('🌿','Tıbbi Bitkiler')],
+    '27': [('🫘','Antep Fıstığı'), ('🍇','Üzüm'), ('🫒','Zeytin'), ('🌶️','Biber'), ('🌿','Tıbbi Bitkiler')],
+    '28': [('🌰','Fındık'), ('🌽','Mısır'), ('🥝','Kivi'), ('🍯','Bal'), ('🐟','Alabalık')],
+    '29': [('🌰','Fındık'), ('🍯','Bal'), ('🍑','Kayısı'), ('🌾','Arpa'), ('🍎','Elma')],
+    '30': [('🍯','Bal'), ('🌿','Tıbbi Bitkiler'), ('🐑','Koyun'), ('🌾','Arpa'), ('🍎','Elma')],
+    '31': [('🫒','Zeytin'), ('🍊','Narenciye'), ('🍌','Muz'), ('🍇','Üzüm'), ('🌿','Tıbbi Bitkiler')],
+    '32': [('🌹','Gül Yağı'), ('🍎','Elma'), ('🍒','Kiraz'), ('🐄','Büyükbaş'), ('🌿','Lavanta')],
+    '33': [('🍊','Narenciye'), ('🍌','Muz'), ('🍓','Çilek'), ('🫙','Susam'), ('🍅','Domates')],
+    '34': [('🍇','Bağcılık'), ('🍅','Domates'), ('🥒','Salatalık'), ('🌿','Tıbbi Bitkiler'), ('🐟','Su Ürünleri')],
+    '35': [('🍇','Üzüm / Kuru Üzüm'), ('🫒','Zeytin'), ('🍒','İncir'), ('🌿','Pamuk'), ('🍅','Domates')],
+    '36': [('🧀','Kaşar Peyniri'), ('🍯','Bal'), ('🌾','Arpa'), ('🐑','Koyun'), ('🌾','Buğday')],
+    '37': [('🧄','Sarımsak'), ('🥬','Lahana'), ('🍎','Elma'), ('🌰','Fındık'), ('🌿','Tıbbi Bitkiler')],
+    '38': [('🍬','Şeker Pancarı'), ('🥔','Patates'), ('🌾','Buğday'), ('🍎','Elma'), ('🧀','Pastırma')],
+    '39': [('🌻','Ayçiçeği'), ('🌾','Buğday'), ('🍬','Şeker Pancarı'), ('🍇','Üzüm'), ('🍅','Domates')],
+    '40': [('🍬','Şeker Pancarı'), ('🌾','Buğday'), ('🫘','Nohut'), ('🍎','Elma'), ('🌿','Tıbbi Bitkiler')],
+    '41': [('🍓','Çilek'), ('🍅','Domates'), ('🌰','Fındık'), ('🌽','Mısır'), ('🥒','Salatalık')],
+    '42': [('🌾','Buğday'), ('🍬','Şeker Pancarı'), ('🌾','Arpa'), ('🌻','Ayçiçeği'), ('🥔','Patates')],
+    '43': [('🍬','Şeker Pancarı'), ('🍎','Elma'), ('🍅','Domates'), ('🌾','Buğday'), ('🥔','Patates')],
+    '44': [('🍑','Kayısı'), ('🍇','Üzüm'), ('🍎','Elma'), ('🌾','Buğday'), ('🍅','Domates')],
+    '45': [('🍇','Üzüm'), ('🫒','Zeytin'), ('🍒','İncir'), ('🌿','Pamuk'), ('🍅','Domates')],
+    '46': [('🌶️','Kırmızı Biber'), ('🫙','Susam'), ('🫘','Antep Fıstığı'), ('🌾','Buğday'), ('🍅','Domates')],
+    '47': [('🌾','Buğday'), ('🌿','Pamuk'), ('🌾','Mercimek'), ('🫒','Zeytin'), ('🍇','Üzüm')],
+    '48': [('🍯','Bal'), ('🍊','Mandalina'), ('🫒','Zeytin'), ('🍅','Domates'), ('🌹','Susam')],
+    '49': [('🍬','Şeker Pancarı'), ('🌾','Arpa'), ('🐑','Koyun'), ('🌾','Buğday'), ('🥔','Patates')],
+    '50': [('🥔','Patates'), ('🍇','Üzüm'), ('🌾','Buğday'), ('🌿','Tıbbi Bitkiler'), ('🍎','Elma')],
+    '51': [('🥔','Patates'), ('🍎','Elma'), ('🍬','Şeker Pancarı'), ('🌾','Buğday'), ('🫘','Nohut')],
+    '52': [('🌰','Fındık'), ('🥝','Kivi'), ('🌽','Mısır'), ('🍯','Bal'), ('🌿','Tıbbi Bitkiler')],
+    '53': [('🍵','Çay'), ('🍯','Bal'), ('🌽','Mısır'), ('🐟','Alabalık'), ('🌿','Tıbbi Bitkiler')],
+    '54': [('🌰','Fındık'), ('🌽','Mısır'), ('🍓','Çilek'), ('🍅','Domates'), ('🥒','Salatalık')],
+    '55': [('🌿','Tütün'), ('🌰','Fındık'), ('🌽','Mısır'), ('🌾','Pirinç'), ('🍅','Domates')],
+    '56': [('🫘','Siirt Fıstığı'), ('🌾','Pirinç'), ('🫚','Badem'), ('🐑','Koyun'), ('🍯','Bal')],
+    '57': [('🍎','Elma'), ('🌰','Fındık'), ('🐟','Balık'), ('🌿','Tıbbi Bitkiler'), ('🌾','Buğday')],
+    '58': [('🍬','Şeker Pancarı'), ('🍎','Elma'), ('🌾','Buğday'), ('🐕','Kangal'), ('🌿','Tıbbi Bitkiler')],
+    '59': [('🌻','Ayçiçeği'), ('🌾','Buğday'), ('🍇','Üzüm'), ('🍑','Şeftali'), ('🍅','Domates')],
+    '60': [('🫘','Nohut'), ('🍅','Domates'), ('🌿','Tütün'), ('🍎','Elma'), ('🌾','Buğday')],
+    '61': [('🌰','Fındık'), ('🌽','Mısır'), ('🥝','Kivi'), ('🍵','Çay'), ('🐟','Alabalık')],
+    '62': [('🍯','Bal'), ('🍎','Elma'), ('🌿','Tıbbi Bitkiler'), ('🐟','Alabalık'), ('🐑','Koyun')],
+    '63': [('🌿','Pamuk'), ('🌾','Buğday'), ('🌶️','Kırmızı Biber'), ('🌾','Mercimek'), ('🍅','Domates')],
+    '64': [('🍬','Şeker Pancarı'), ('🍇','Üzüm'), ('🌾','Buğday'), ('🐑','Koyun'), ('🌿','Tıbbi Bitkiler')],
+    '65': [('🍯','Bal'), ('🐟','İnci Kefali'), ('🐐','Keçi'), ('🌾','Arpa'), ('🌿','Tıbbi Bitkiler')],
+    '66': [('🍬','Şeker Pancarı'), ('🍎','Elma'), ('🫘','Nohut'), ('🌾','Buğday'), ('🐑','Koyun')],
+    '67': [('🌰','Fındık'), ('🌽','Mısır'), ('🌾','Buğday'), ('🐟','Alabalık'), ('🌿','Tıbbi Bitkiler')],
+    '68': [('🌾','Buğday'), ('🍬','Şeker Pancarı'), ('🥔','Patates'), ('🍅','Domates'), ('🐑','Koyun')],
+    '69': [('🍯','Bal'), ('🌾','Buğday'), ('🐑','Koyun'), ('🌿','Tıbbi Bitkiler'), ('🍎','Elma')],
+    '70': [('🍎','Elma'), ('🌾','Buğday'), ('🍒','Kiraz'), ('🍅','Domates'), ('🐑','Koyun')],
+    '71': [('🌾','Buğday'), ('🌾','Arpa'), ('🍬','Şeker Pancarı'), ('🐄','Büyükbaş'), ('🌿','Tıbbi Bitkiler')],
+    '72': [('🌾','Buğday'), ('🌿','Pamuk'), ('🫒','Zeytinyağı'), ('🍅','Domates'), ('🐑','Koyun')],
+    '73': [('🌾','Buğday'), ('🍇','Üzüm'), ('🐑','Koyun'), ('🍯','Bal'), ('🌿','Tıbbi Bitkiler')],
+    '74': [('🌽','Mısır'), ('🌰','Fındık'), ('🐟','Alabalık'), ('🌿','Tıbbi Bitkiler'), ('🐄','Büyükbaş')],
+    '75': [('🍯','Bal'), ('🌾','Arpa'), ('🐦','Kaz'), ('🧀','Kaşar Peyniri'), ('🐑','Koyun')],
+    '76': [('🌿','Pamuk'), ('🌾','Buğday'), ('🍑','Kayısı'), ('🍅','Domates'), ('🌽','Mısır')],
+    '77': [('🌸','Çiçekçilik'), ('🍅','Domates'), ('🥒','Salatalık'), ('🌿','Tıbbi Bitkiler'), ('🌰','Fındık')],
+    '78': [('🌽','Mısır'), ('🌰','Fındık'), ('🐟','Alabalık'), ('🌿','Tıbbi Bitkiler'), ('🌾','Buğday')],
+    '79': [('🫒','Zeytin'), ('🍇','Üzüm'), ('🌶️','Biber'), ('🌾','Buğday'), ('🍅','Domates')],
+    '80': [('🥜','Yer Fıstığı'), ('🌿','Pamuk'), ('🍊','Narenciye'), ('🍅','Domates'), ('🌾','Mısır')],
+    '81': [('🌰','Fındık'), ('🌽','Mısır'), ('🍯','Bal'), ('🌿','Tıbbi Bitkiler'), ('🐟','Alabalık')],
+}
+
 lines = ['const provinces = [']
 for plate in [f'{i:02d}' for i in range(1, 82)]:
     d = data[plate]
@@ -95,7 +179,8 @@ for plate in [f'{i:02d}' for i in range(1, 82)]:
     topics_json = json.dumps(d['topics'], ensure_ascii=False)
     flags_json = json.dumps(d['biotech_flags'], ensure_ascii=False)
     has_biotech = 'true' if d['has_biotech'] else 'false'
-    lines.append(f'    {{ plate: "{plate}", name: "{d["name"]}", desc: "{desc_escaped}", hasBiotech: {has_biotech}, topics: {topics_json}, biotechFlags: {flags_json} }},')
+    agri_json = json.dumps([{'icon': icon, 'name': name} for icon, name in agri.get(plate, [])], ensure_ascii=False)
+    lines.append(f'    {{ plate: "{plate}", name: "{d["name"]}", desc: "{desc_escaped}", hasBiotech: {has_biotech}, topics: {topics_json}, biotechFlags: {flags_json}, agriProducts: {agri_json} }},')
 lines.append('];')
 
 with open('data.js', 'w', encoding='utf-8') as f:

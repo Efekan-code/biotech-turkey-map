@@ -67,7 +67,22 @@ document.addEventListener("DOMContentLoaded", () => {
     function openModal(province) {
         modalTitle.textContent = province.name;
         modalPlate.textContent = province.plate;
-        modalDesc.textContent = province.desc;
+
+        // Replace desc with agri products grid
+        if (province.agriProducts && province.agriProducts.length > 0) {
+            modalDesc.innerHTML = '';
+            const grid = document.createElement('div');
+            grid.className = 'agri-grid';
+            province.agriProducts.forEach(p => {
+                const chip = document.createElement('div');
+                chip.className = 'agri-chip';
+                chip.innerHTML = `<span class="agri-icon">${p.icon}</span><span class="agri-name">${p.name}</span>`;
+                grid.appendChild(chip);
+            });
+            modalDesc.appendChild(grid);
+        } else {
+            modalDesc.textContent = province.desc;
+        }
 
         // Build topic list
         modalTopics.innerHTML = '';
