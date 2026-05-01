@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkileşimli Türkiye Haritası</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sol Panel: İller Listesi -->
+        <aside class="sidebar glass-panel">
+            <div class="sidebar-header">
+                <h2>İllerimiz</h2>
+                <p>Türkiye'nin 81 İli</p>
+            </div>
+            <ul id="province-list" class="province-list">
+                <!-- Javascript ile doldurulacak -->
+            </ul>
+        </aside>
+
+        <!-- Sağ Panel: Harita -->
+        <main class="map-container">
+            <div id="svgMap" class="turkey-map">
+                <!-- SVG Javascript ile buraya eklenecek -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Pop-up Modal -->
+    <div id="info-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <h3 id="modal-title">İl Adı</h3>
+            <div class="plate-badge"><span id="modal-plate">01</span></div>
+            <p id="modal-desc">Bu il hakkında kısa bilgi burada yer alacak.</p>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

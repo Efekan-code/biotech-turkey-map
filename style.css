@@ -1,0 +1,268 @@
+:root {
+    --bg-color: #0f172a;
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-color: #38bdf8;
+    --accent-hover: #0ea5e9;
+    --map-fill: #1e293b;
+    --map-stroke: #334155;
+    --map-hover-fill: #38bdf8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+        radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), 
+        radial-gradient(at 100% 0%, hsla(339,49%,30%,0.2) 0, transparent 50%);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Glassmorphism Panel Utilities */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.sidebar-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.sidebar-header p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+/* Scrollbar Customization */
+.province-list {
+    list-style: none;
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px;
+}
+
+.province-list::-webkit-scrollbar {
+    width: 6px;
+}
+.province-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+.province-list::-webkit-scrollbar-thumb {
+    background: var(--map-stroke);
+    border-radius: 10px;
+}
+.province-list::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* List Items */
+.province-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.province-item:hover, .province-item.active {
+    background: rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.3);
+    transform: translateX(5px);
+}
+
+.plate-badge {
+    background: var(--accent-color);
+    color: #fff;
+    font-weight: 700;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: 15px;
+    font-size: 0.875rem;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+.province-item .name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Map Container */
+.map-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.turkey-map {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SVG Styles */
+.turkey-map svg {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+.turkey-map svg path {
+    fill: var(--map-fill);
+    stroke: var(--map-stroke);
+    stroke-width: 1.5;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    transform-origin: center;
+}
+
+/* Map Hover Animations */
+.turkey-map svg g[data-plate]:hover path, 
+.turkey-map svg g[data-plate].active path {
+    fill: var(--map-hover-fill);
+    stroke: #fff;
+    stroke-width: 2;
+    transform: translateY(-5px) scale(1.02);
+    filter: drop-shadow(0 15px 15px rgba(14, 165, 233, 0.4));
+}
+
+/* Hide unused group overlays in SVG if any */
+.turkey-map svg g[data-plate] > g {
+    pointer-events: none; /* Make text or inner paths non-blocking */
+}
+.turkey-map svg g[data-plate] > g path {
+    fill: none !important;
+    stroke: none !important;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal-content {
+    width: 400px;
+    max-width: 90%;
+    padding: 30px;
+    position: relative;
+    transform: scale(1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal.hidden .modal-content {
+    transform: scale(0.8);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+.modal-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.modal-content .plate-badge {
+    margin-bottom: 20px;
+    display: inline-flex;
+}
+
+.modal-content p {
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: 40vh;
+    }
+    .map-container {
+        height: 60vh;
+    }
+}
