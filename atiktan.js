@@ -1,4 +1,3 @@
-// Province name lookup (plate -> name) from posa-data
 const PLATE_NAMES = {
     '01':'Adana','02':'Adıyaman','03':'Afyonkarahisar','04':'Ağrı','05':'Amasya',
     '06':'Ankara','07':'Antalya','08':'Artvin','09':'Aydın','10':'Balıkesir',
@@ -28,6 +27,11 @@ const CAT_COLORS = {
     diger:     { fill: 'rgba(99,102,241,0.22)', hover: '#6366f1', glow: '99,102,241' },
 };
 
+const POT_LABELS = { yüksek: 'Özel Bölge', orta: 'Orta', başlangıç: 'Başlangıç' };
+const DIM_FILL = 'rgba(15,23,42,0.5)';
+
+let activeFilter = null;
+
 document.addEventListener('DOMContentLoaded', () => {
     const svgMapContainer = document.getElementById('svgMap');
     const provinceList    = document.getElementById('province-list');
@@ -41,10 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetch('turkey-map.svg')
         .then(r => r.text())
-        .then(svg => {
-            svgMapContainer.innerHTML = svg;
-            initApp();
-        });
+        .then(svg => { svgMapContainer.innerHTML = svg; initApp(); });
 
     function initApp() {
         // Build sidebar list
@@ -60,40 +61,88 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="cat-dot" style="background:${CAT_COLORS[p.category].hover}" title="${cat.label}"></span>
             `;
             provinceList.appendChild(li);
-            li.addEventListener('mouseenter', () => highlightMap(p.plate, true));
-            li.addEventListener('mouseleave', () => highlightMap(p.plate, false));
+            li.addEventListener('mouseenter', () => { if (!activeFilter) highlightMap(p.plate, true); });
+            li.addEventListener('mouseleave', () => { if (!activeFilter) highlightMap(p.plate, false); });
             li.addEventListener('click', () => openModal(p, name));
         });
 
         // Style + wire map groups
-        const mapGroups = document.querySelectorAll('g[data-plate]');
-        mapGroups.forEach(group => {
+        document.querySelectorAll('g[data-plate]').forEach(group => {
             const plate = group.dataset.plate;
             const pData = posaProvinces.find(p => p.plate === plate);
             if (!pData) return;
-
             const c = CAT_COLORS[pData.category];
-            // Set default fill via CSS custom property
-            group.querySelectorAll('path').forEach(path => {
-                path.style.fill = c.fill;
-            });
+            group.querySelectorAll('path').forEach(path => { path.style.fill = c.fill; });
             group.dataset.category = pData.category;
 
             group.addEventListener('mouseenter', () => {
                 highlightList(plate, true);
-                group.querySelectorAll('path').forEach(path => {
-                    path.style.fill = c.hover;
-                    path.style.filter = `drop-shadow(0 0 12px rgba(${c.glow},0.8))`;
-                });
+                if (!activeFilter || activeFilter === pData.category) {
+                    group.querySelectorAll('path').forEach(path => {
+                        path.style.fill = c.hover;
+                        path.style.filter = `drop-shadow(0 0 14px rgba(${c.glow},0.85))`;
+                    });
+                }
             });
             group.addEventListener('mouseleave', () => {
                 highlightList(plate, false);
+                const targetFill = (activeFilter && activeFilter !== pData.category) ? DIM_FILL : c.fill;
                 group.querySelectorAll('path').forEach(path => {
-                    path.style.fill = c.fill;
+                    path.style.fill = targetFill;
                     path.style.filter = '';
                 });
             });
             group.addEventListener('click', () => openModal(pData, PLATE_NAMES[plate] || plate));
+        });
+
+        // Category legend filter
+        document.querySelectorAll('.legend-item').forEach(item => {
+            item.style.cursor = 'pointer';
+            item.addEventListener('click', () => {
+                const cat = item.dataset.cat;
+                if (activeFilter === cat) {
+                    activeFilter = null;
+                    document.querySelectorAll('.legend-item').forEach(i => i.classList.remove('legend-active'));
+                    resetFilter();
+                } else {
+                    activeFilter = cat;
+                    document.querySelectorAll('.legend-item').forEach(i => i.classList.toggle('legend-active', i.dataset.cat === cat));
+                    applyFilter(cat);
+                }
+            });
+        });
+    }
+
+    function applyFilter(cat) {
+        const c = CAT_COLORS[cat];
+        posaProvinces.forEach(p => {
+            const g = document.querySelector(`g[data-plate="${p.plate}"]`);
+            if (!g) return;
+            if (p.category === cat) {
+                g.querySelectorAll('path').forEach(path => {
+                    path.style.fill = CAT_COLORS[p.category].hover;
+                    path.style.filter = `drop-shadow(0 0 16px rgba(${c.glow},0.7))`;
+                    path.style.opacity = '1';
+                });
+            } else {
+                g.querySelectorAll('path').forEach(path => {
+                    path.style.fill = DIM_FILL;
+                    path.style.filter = '';
+                    path.style.opacity = '0.35';
+                });
+            }
+        });
+    }
+
+    function resetFilter() {
+        posaProvinces.forEach(p => {
+            const g = document.querySelector(`g[data-plate="${p.plate}"]`);
+            if (!g) return;
+            g.querySelectorAll('path').forEach(path => {
+                path.style.fill = CAT_COLORS[p.category].fill;
+                path.style.filter = '';
+                path.style.opacity = '1';
+            });
         });
     }
 
@@ -105,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const c = CAT_COLORS[pData.category];
         g.querySelectorAll('path').forEach(path => {
             path.style.fill   = on ? c.hover : c.fill;
-            path.style.filter = on ? `drop-shadow(0 0 12px rgba(${c.glow},0.8))` : '';
+            path.style.filter = on ? `drop-shadow(0 0 14px rgba(${c.glow},0.85))` : '';
         });
     }
 
@@ -121,17 +170,16 @@ document.addEventListener('DOMContentLoaded', () => {
         modalTitle.textContent = name;
 
         modalCatBadge.textContent = `${cat.icon} ${cat.label}`;
-        modalCatBadge.style.background = `rgba(${c.glow},0.15)`;
-        modalCatBadge.style.borderColor = `rgba(${c.glow},0.4)`;
-        modalCatBadge.style.color = c.hover;
+        modalCatBadge.style.background   = `rgba(${c.glow},0.15)`;
+        modalCatBadge.style.borderColor  = `rgba(${c.glow},0.4)`;
+        modalCatBadge.style.color        = c.hover;
 
-        const potMap = { yüksek: 'pot-yuksek', orta: 'pot-orta', başlangıç: 'pot-baslangic' };
-        modalPotential.textContent = pData.potential.charAt(0).toUpperCase() + pData.potential.slice(1);
-        modalPotential.className = `pot-badge ${potMap[pData.potential] || 'pot-baslangic'}`;
+        const potKey = pData.potential;
+        modalPotential.textContent = POT_LABELS[potKey] || potKey;
+        modalPotential.className   = `pot-badge ${potKey === 'yüksek' ? 'pot-yuksek' : potKey === 'orta' ? 'pot-orta' : 'pot-baslangic'}`;
 
         modalExtra.textContent = pData.extra || cat.description;
 
-        // Compounds
         modalCompounds.innerHTML = '';
         const header = document.createElement('p');
         header.className = 'compounds-header';
