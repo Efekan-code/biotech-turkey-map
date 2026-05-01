@@ -414,6 +414,478 @@ body.light-theme .agri-chip {
     box-shadow: 0 0 6px rgba(52, 211, 153, 0.6);
 }
 
+/* ===== NAVBAR ===== */
+.navbar {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    flex-shrink: 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    white-space: nowrap;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 4px;
+    flex: 1;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+    background: rgba(56, 189, 248, 0.08);
+}
+
+.nav-link.active {
+    color: var(--accent-color);
+    background: rgba(56, 189, 248, 0.1);
+    border-color: rgba(56, 189, 248, 0.25);
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 4px;
+    margin-left: auto;
+    transition: color 0.3s;
+    flex-shrink: 0;
+}
+
+.theme-btn:hover { color: var(--text-primary); }
+
+/* Adjust app-container to account for navbar */
+.app-container {
+    height: calc(100vh - 56px);
+}
+
+/* ===== ATIKTAN MAP: kategori stilleri ===== */
+[data-page="atiktan"] .turkey-map svg path {
+    stroke: var(--map-stroke);
+    stroke-width: 1;
+    transition: fill 0.25s ease, filter 0.25s ease;
+    cursor: pointer;
+}
+
+[data-page="atiktan"] .turkey-map svg g[data-plate]:hover path,
+[data-page="atiktan"] .turkey-map svg g[data-plate].active path {
+    stroke: rgba(255,255,255,0.6);
+    stroke-width: 2;
+}
+
+/* Category dot in sidebar for atiktan page */
+.cat-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+/* Legend panel */
+.legend-panel {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.legend-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.legend-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.legend-item:hover { color: var(--text-primary); }
+
+.legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.potential-legend { margin-top: 2px; }
+
+.pot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+/* Potential badges */
+.pot-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.pot-yuksek    { background: rgba(52,211,153,0.15); color: #34d399; border: 1px solid rgba(52,211,153,0.3); }
+.pot-orta      { background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+.pot-baslangic { background: rgba(148,163,184,0.15); color: #94a3b8; border: 1px solid rgba(148,163,184,0.25); }
+
+/* Category badge in modal */
+.modal-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0 14px;
+    flex-wrap: wrap;
+}
+
+.cat-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+}
+
+.modal-extra-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+/* Compounds table */
+.compounds-header {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.compounds-list {
+    margin-top: 4px;
+}
+
+.compound-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 8px;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.04);
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+}
+
+.compound-name  { font-weight: 600; color: var(--text-primary); }
+.compound-value { color: #34d399; font-weight: 600; white-space: nowrap; }
+.compound-market{ color: var(--text-secondary); font-size: 0.72rem; white-space: nowrap; }
+
+/* ===== BİLGİLER SAYFASI ===== */
+body.page-info {
+    overflow-y: auto;
+    height: auto;
+}
+
+.info-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.info-hero {
+    padding: 40px;
+    text-align: center;
+}
+
+.hero-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.info-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.accent { color: var(--accent-color); }
+
+.hero-sub {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.section-sub {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Stat cards */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.stat-card {
+    padding: 24px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.stat-sub {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Info cards grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.info-card {
+    padding: 20px;
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Table */
+.table-wrapper {
+    padding: 0;
+    overflow-x: auto;
+    margin-top: 16px;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.info-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.info-table td {
+    padding: 11px 16px;
+    color: var(--text-primary);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.info-table tr:last-child td { border-bottom: none; }
+.info-table tr:hover td { background: rgba(255,255,255,0.03); }
+
+.table-note {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+/* Scenarios */
+.scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.scenario-card {
+    padding: 24px 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.scenario-card:hover { transform: translateY(-3px); }
+
+.featured-scenario {
+    border-color: rgba(56,189,248,0.35);
+    background: rgba(56,189,248,0.05);
+}
+
+.scenario-pct {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    line-height: 1;
+}
+
+.scenario-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin: 6px 0 12px;
+}
+
+.scenario-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.scenario-jobs {
+    font-size: 0.72rem;
+    color: #34d399;
+}
+
+.scenario-note {
+    padding: 14px 18px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+/* Proposal cards */
+.proposal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.proposal-card {
+    padding: 24px;
+}
+
+.proposal-icon {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.proposal-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.proposal-card p {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.info-footer {
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    padding-top: 20px;
+    border-top: 1px solid var(--glass-border);
+}
+
+/* Light theme adjustments */
+body.light-theme .info-table td { border-bottom-color: rgba(0,0,0,0.05); }
+body.light-theme .compound-row  { background: rgba(0,0,0,0.03); }
+body.light-theme .info-table tr:hover td { background: rgba(0,0,0,0.025); }
+
 /* Responsive */
 @media (max-width: 768px) {
     .app-container {
@@ -426,4 +898,6 @@ body.light-theme .agri-chip {
     .map-container {
         height: 60vh;
     }
+    .info-hero h1 { font-size: 1.6rem; }
+    .navbar-brand { display: none; }
 }

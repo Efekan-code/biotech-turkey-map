@@ -114,9 +114,5 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target === modal) modal.classList.add("hidden");
     });
 
-    const themeToggleBtn = document.getElementById("theme-toggle");
-    themeToggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("light-theme");
-        themeToggleBtn.textContent = document.body.classList.contains("light-theme") ? "☀️" : "🌙";
-    });
+    // Theme toggle is handled by navbar.js
 });
