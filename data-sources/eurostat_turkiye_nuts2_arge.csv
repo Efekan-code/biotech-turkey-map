@@ -1,0 +1,105 @@
+bolge_kodu,bolge_adi,yil,arge_gdp_pct
+TR10,İstanbul,2021,1.37
+TR10,İstanbul,2022,1.32
+TR10,İstanbul,2023,1.36
+TR10,İstanbul,2024,1.67
+TR21,"Tekirdağ, Edirne, Kırklareli",2021,0.89
+TR21,"Tekirdağ, Edirne, Kırklareli",2022,0.95
+TR21,"Tekirdağ, Edirne, Kırklareli",2023,0.98
+TR21,"Tekirdağ, Edirne, Kırklareli",2024,0.91
+TR22,"Balıkesir, Çanakkale",2021,0.52
+TR22,"Balıkesir, Çanakkale",2022,0.56
+TR22,"Balıkesir, Çanakkale",2023,0.6
+TR22,"Balıkesir, Çanakkale",2024,0.63
+TR31,İzmir,2021,0.9
+TR31,İzmir,2022,0.87
+TR31,İzmir,2023,1.04
+TR31,İzmir,2024,1.09
+TR32,"Aydın, Denizli, Muğla",2021,0.46
+TR32,"Aydın, Denizli, Muğla",2022,0.44
+TR32,"Aydın, Denizli, Muğla",2023,0.51
+TR32,"Aydın, Denizli, Muğla",2024,0.57
+TR33,"Manisa, Afyonkarahisar, Kütahya, Uşak",2021,0.99
+TR33,"Manisa, Afyonkarahisar, Kütahya, Uşak",2022,0.98
+TR33,"Manisa, Afyonkarahisar, Kütahya, Uşak",2023,0.97
+TR33,"Manisa, Afyonkarahisar, Kütahya, Uşak",2024,0.97
+TR41,"Bursa, Eskişehir, Bilecik",2021,1.47
+TR41,"Bursa, Eskişehir, Bilecik",2022,1.33
+TR41,"Bursa, Eskişehir, Bilecik",2023,1.39
+TR41,"Bursa, Eskişehir, Bilecik",2024,1.38
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2021,1.94
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2022,1.71
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2023,2.29
+TR42,"Kocaeli, Sakarya, Düzce, Bolu, Yalova",2024,2.21
+TR51,Ankara,2021,4.3
+TR51,Ankara,2022,4.08
+TR51,Ankara,2023,4.03
+TR51,Ankara,2024,3.88
+TR52,"Konya, Karaman",2021,1.05
+TR52,"Konya, Karaman",2022,0.85
+TR52,"Konya, Karaman",2023,0.88
+TR52,"Konya, Karaman",2024,0.74
+TR61,"Antalya, Isparta, Burdur",2021,0.69
+TR61,"Antalya, Isparta, Burdur",2022,0.57
+TR61,"Antalya, Isparta, Burdur",2023,0.61
+TR61,"Antalya, Isparta, Burdur",2024,0.7
+TR62,"Adana, Mersin",2021,0.45
+TR62,"Adana, Mersin",2022,0.46
+TR62,"Adana, Mersin",2023,0.5
+TR62,"Adana, Mersin",2024,0.44
+TR63,"Hatay, Kahramanmaraş, Osmaniye",2021,0.26
+TR63,"Hatay, Kahramanmaraş, Osmaniye",2022,0.33
+TR63,"Hatay, Kahramanmaraş, Osmaniye",2023,0.42
+TR63,"Hatay, Kahramanmaraş, Osmaniye",2024,0.33
+TR71,"Kırıkkale, Aksaray, Niğde, Nevşehir, Kırşehir",2021,1.5
+TR71,"Kırıkkale, Aksaray, Niğde, Nevşehir, Kırşehir",2022,0.7
+TR71,"Kırıkkale, Aksaray, Niğde, Nevşehir, Kırşehir",2023,0.68
+TR71,"Kırıkkale, Aksaray, Niğde, Nevşehir, Kırşehir",2024,0.79
+TR72,"Kayseri, Sivas, Yozgat",2021,0.94
+TR72,"Kayseri, Sivas, Yozgat",2022,0.95
+TR72,"Kayseri, Sivas, Yozgat",2023,0.98
+TR72,"Kayseri, Sivas, Yozgat",2024,1.04
+TR81,"Zonguldak, Karabük, Bartın",2021,1.08
+TR81,"Zonguldak, Karabük, Bartın",2022,0.63
+TR81,"Zonguldak, Karabük, Bartın",2023,0.8
+TR81,"Zonguldak, Karabük, Bartın",2024,0.91
+TR82,"Kastamonu, Çankırı, Sinop",2021,2
+TR82,"Kastamonu, Çankırı, Sinop",2022,0.57
+TR82,"Kastamonu, Çankırı, Sinop",2023,0.54
+TR82,"Kastamonu, Çankırı, Sinop",2024,0.65
+TR83,"Samsun, Tokat, Çorum, Amasya",2021,0.59
+TR83,"Samsun, Tokat, Çorum, Amasya",2022,0.66
+TR83,"Samsun, Tokat, Çorum, Amasya",2023,0.68
+TR83,"Samsun, Tokat, Çorum, Amasya",2024,0.72
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüşhane",2021,0.58
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüşhane",2022,0.71
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüşhane",2023,0.7
+TR90,"Trabzon, Ordu, Giresun, Rize, Artvin, Gümüşhane",2024,0.66
+TRA1,"Erzurum, Erzincan, Bayburt",2021,1.72
+TRA1,"Erzurum, Erzincan, Bayburt",2022,1.99
+TRA1,"Erzurum, Erzincan, Bayburt",2023,1.53
+TRA1,"Erzurum, Erzincan, Bayburt",2024,1.52
+TRA2,"Ağrı, Kars, Iğdır, Ardahan",2021,0.88
+TRA2,"Ağrı, Kars, Iğdır, Ardahan",2022,0.71
+TRA2,"Ağrı, Kars, Iğdır, Ardahan",2023,0.72
+TRA2,"Ağrı, Kars, Iğdır, Ardahan",2024,0.85
+TRB1,"Malatya, Elazığ, Bingöl, Tunceli",2021,1.49
+TRB1,"Malatya, Elazığ, Bingöl, Tunceli",2022,1.16
+TRB1,"Malatya, Elazığ, Bingöl, Tunceli",2023,1.25
+TRB1,"Malatya, Elazığ, Bingöl, Tunceli",2024,1.01
+TRB2,"Van, Muş, Bitlis, Hakkari",2021,1.4
+TRB2,"Van, Muş, Bitlis, Hakkari",2022,0.67
+TRB2,"Van, Muş, Bitlis, Hakkari",2023,0.7
+TRB2,"Van, Muş, Bitlis, Hakkari",2024,0.71
+TRC1,"Gaziantep, Adıyaman, Kilis",2021,0.46
+TRC1,"Gaziantep, Adıyaman, Kilis",2022,0.42
+TRC1,"Gaziantep, Adıyaman, Kilis",2023,0.48
+TRC1,"Gaziantep, Adıyaman, Kilis",2024,0.49
+TRC2,"Şanlıurfa, Diyarbakır",2021,0.6
+TRC2,"Şanlıurfa, Diyarbakır",2022,0.47
+TRC2,"Şanlıurfa, Diyarbakır",2023,0.48
+TRC2,"Şanlıurfa, Diyarbakır",2024,0.49
+TRC3,"Mardin, Batman, Şırnak, Siirt",2021,0.53
+TRC3,"Mardin, Batman, Şırnak, Siirt",2022,0.23
+TRC3,"Mardin, Batman, Şırnak, Siirt",2023,0.26
+TRC3,"Mardin, Batman, Şırnak, Siirt",2024,0.33
