@@ -28,6 +28,19 @@ body.light-theme {
     --body-bg-image: radial-gradient(at 0% 0%, hsla(210,40%,96%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(210,40%,90%,0.5) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(210,40%,92%,0.5) 0, transparent 50%);
 }
 
+body.light-theme .turkey-map svg g.biotech-province path {
+    fill: #d1fae5;
+}
+
+body.light-theme .topic-item {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+body.light-theme .topic-item.biotech-topic {
+    background: rgba(52, 211, 153, 0.1);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -223,12 +236,14 @@ body {
 }
 
 .modal-content {
-    width: 400px;
-    max-width: 90%;
+    width: 480px;
+    max-width: 92%;
+    max-height: 88vh;
     padding: 30px;
     position: relative;
     transform: scale(1);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow-y: auto;
 }
 
 .modal.hidden .modal-content {
@@ -265,6 +280,99 @@ body {
 .modal-content p {
     line-height: 1.6;
     color: var(--text-primary);
+}
+
+/* Biotech province indicator on sidebar list */
+.province-item.has-biotech {
+    border-left: 2px solid rgba(52, 211, 153, 0.5);
+}
+
+.biotech-indicator {
+    margin-left: auto;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.12);
+    border: 1px solid rgba(52, 211, 153, 0.35);
+    border-radius: 4px;
+    padding: 2px 5px;
+    flex-shrink: 0;
+}
+
+/* Biotech province on SVG map — subtle green tint */
+.turkey-map svg g.biotech-province path {
+    fill: #1a3a2a;
+}
+
+.turkey-map svg g.biotech-province:hover path,
+.turkey-map svg g.biotech-province.active path {
+    fill: #34d399;
+    stroke: #fff;
+    stroke-width: 2.5;
+    filter: drop-shadow(0 0px 15px rgba(52, 211, 153, 0.8)) drop-shadow(0 -5px 5px rgba(52, 211, 153, 0.4));
+}
+
+/* Modal topics section */
+.modal-topics {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.modal-topics::-webkit-scrollbar {
+    width: 4px;
+}
+.modal-topics::-webkit-scrollbar-thumb {
+    background: var(--map-stroke);
+    border-radius: 4px;
+}
+
+.topic-legend {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    color: #34d399;
+    margin-bottom: 4px;
+    opacity: 0.85;
+}
+
+.topic-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.topic-item.biotech-topic {
+    color: var(--text-primary);
+    background: rgba(52, 211, 153, 0.07);
+    border: 1px solid rgba(52, 211, 153, 0.22);
+    font-weight: 500;
+}
+
+.topic-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-secondary);
+    flex-shrink: 0;
+    margin-top: 6px;
+}
+
+.topic-dot.biotech-dot {
+    background: #34d399;
+    box-shadow: 0 0 6px rgba(52, 211, 153, 0.6);
 }
 
 /* Responsive */
