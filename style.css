@@ -445,6 +445,17 @@ body.light-theme .agri-chip {
 
 .navbar-brand span { letter-spacing: -0.01em; }
 
+.navbar-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 4px rgba(93,197,160,0.3));
+}
+
+body.light-theme .navbar-logo {
+    filter: none;
+}
+
 .navbar-links {
     display: flex;
     gap: 4px;

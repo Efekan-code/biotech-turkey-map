@@ -20,13 +20,7 @@
         nav.className = 'navbar glass-panel';
         nav.innerHTML = `
             <a href="index.html" class="navbar-brand">
-                <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 8 A42 42 0 1 1 8 50" stroke="#34d399" stroke-width="11" stroke-linecap="round" fill="none"/>
-                    <polygon points="6,38 20,52 22,36" fill="#34d399"/>
-                    <ellipse cx="38" cy="56" rx="16" ry="22" fill="#38bdf8" transform="rotate(-20,38,56)"/>
-                    <ellipse cx="62" cy="56" rx="16" ry="22" fill="#0ea5e9" transform="rotate(20,62,56)"/>
-                    <line x1="50" y1="78" x2="50" y2="90" stroke="#34d399" stroke-width="5" stroke-linecap="round"/>
-                </svg>
+                <img src="localvore-color.png" alt="Localvore" class="navbar-logo">
                 <span>Localvore</span>
             </a>
             <div class="navbar-links">${links}</div>
