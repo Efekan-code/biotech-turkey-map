@@ -9,6 +9,23 @@
     --map-fill: #1e293b;
     --map-stroke: #334155;
     --map-hover-fill: #38bdf8;
+    --modal-overlay: rgba(0, 0, 0, 0.6);
+    --body-bg-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339,49%,30%,0.2) 0, transparent 50%);
+}
+
+body.light-theme {
+    --bg-color: #f8fafc;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-color: #0284c7;
+    --accent-hover: #0369a1;
+    --map-fill: #e2e8f0;
+    --map-stroke: #94a3b8;
+    --map-hover-fill: #0284c7;
+    --modal-overlay: rgba(0, 0, 0, 0.3);
+    --body-bg-image: radial-gradient(at 0% 0%, hsla(210,40%,96%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(210,40%,90%,0.5) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(210,40%,92%,0.5) 0, transparent 50%);
 }
 
 * {
@@ -20,13 +37,11 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-color);
-    background-image: 
-        radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
-        radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), 
-        radial-gradient(at 100% 0%, hsla(339,49%,30%,0.2) 0, transparent 50%);
+    background-image: var(--body-bg-image);
     color: var(--text-primary);
     min-height: 100vh;
     overflow: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .app-container {
@@ -166,14 +181,13 @@ body {
     transform-origin: center;
 }
 
-/* Map Hover Animations */
+/* Map Hover Animations - Fixed glitch by removing transform movement that causes hitbox shift */
 .turkey-map svg g[data-plate]:hover path, 
 .turkey-map svg g[data-plate].active path {
     fill: var(--map-hover-fill);
     stroke: #fff;
-    stroke-width: 2;
-    transform: translateY(-5px) scale(1.02);
-    filter: drop-shadow(0 15px 15px rgba(14, 165, 233, 0.4));
+    stroke-width: 2.5;
+    filter: drop-shadow(0 0px 15px rgba(14, 165, 233, 0.8)) drop-shadow(0 -5px 5px rgba(14, 165, 233, 0.5));
 }
 
 /* Hide unused group overlays in SVG if any */
@@ -192,7 +206,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--modal-overlay);
     display: flex;
     align-items: center;
     justify-content: center;
