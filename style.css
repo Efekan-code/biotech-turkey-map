@@ -177,6 +177,11 @@ body {
     justify-content: center;
 }
 
+/* Hide non-province elements (Cyprus, labels, decorations) */
+.turkey-map svg > g > g:not([data-plate]) {
+    display: none;
+}
+
 /* SVG Styles */
 .turkey-map svg {
     width: 100%;
@@ -959,6 +964,137 @@ body.page-info {
     padding-top: 20px;
     border-top: 1px solid var(--glass-border);
 }
+
+/* ===== EKOSİSTEM VERİLERİ SAYFASI ===== */
+.data-note {
+    padding: 14px 18px;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-top: 16px;
+    border-left: 3px solid rgba(56,189,248,0.5);
+}
+
+.comparison-box {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.comparison-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.comparison-grid { display: flex; flex-direction: column; gap: 10px; }
+
+.comp-item { display: flex; flex-direction: column; gap: 4px; }
+
+.comp-label { font-size: 0.78rem; color: var(--text-secondary); }
+
+.comp-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 4px;
+    height: 22px;
+    overflow: hidden;
+    position: relative;
+}
+
+.comp-bar {
+    height: 100%;
+    border-radius: 4px;
+    min-width: 4px;
+    transition: width 0.6s ease;
+}
+
+.comp-val {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+    margin-left: 8px;
+}
+
+.comp-note {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+.insight-box {
+    padding: 20px;
+    border-left: 3px solid rgba(52,211,153,0.5);
+}
+
+.insight-box h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #34d399;
+    margin-bottom: 8px;
+}
+
+.insight-box p {
+    font-size: 0.83rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+/* Region cards */
+.region-grid { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+
+.region-card {
+    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: 220px 1fr auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.region-name { font-size: 0.82rem; font-weight: 600; color: var(--text-primary); }
+
+.region-bar-wrap {
+    background: rgba(255,255,255,0.05);
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.region-high .region-bar { background: #38bdf8; }
+.region-mid  .region-bar { background: #f97316; }
+.region-low  .region-bar { background: #94a3b8; }
+
+.region-bar { height: 100%; border-radius: 4px; }
+
+.region-val { font-size: 0.9rem; font-weight: 700; color: var(--accent-color); white-space: nowrap; }
+
+.region-note {
+    grid-column: 2 / -1;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    margin-top: -6px;
+}
+
+/* Gap cards */
+.gap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.gap-card { padding: 18px; }
+.gap-icon { font-size: 1.4rem; margin-bottom: 8px; }
+.gap-card h3 { font-size: 0.88rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+.gap-card p { font-size: 0.78rem; line-height: 1.5; color: var(--text-secondary); }
+
+.gap-missing { border-left: 3px solid rgba(239,68,68,0.5); }
+.gap-partial  { border-left: 3px solid rgba(251,191,36,0.5); }
+.gap-ok       { border-left: 3px solid rgba(52,211,153,0.5); }
 
 /* Light theme adjustments */
 body.light-theme .info-table td { border-bottom-color: rgba(0,0,0,0.05); }

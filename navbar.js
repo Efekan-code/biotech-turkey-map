@@ -3,6 +3,7 @@
         { href: 'index.html', label: 'Ana Sayfa' },
         { href: 'atiktan.html', label: 'Atıktan Katma Değere' },
         { href: 'bilgiler.html', label: 'Önemli Bilgiler' },
+        { href: 'ekosistem.html', label: 'Ekosistem Verileri' },
     ];
 
     function getActivePage() {
